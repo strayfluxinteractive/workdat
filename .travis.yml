@@ -3,5 +3,6 @@ rvm:
 - 2.1.2
 deploy:
   provider: heroku
+  app: workdat
   api_key:
     secure: Fh0zpjTMA3UmtzuYBBNQ/52Fl6Lha8PKv4ViG1pSaEg8Lsr1zMCT7e6B1rWP0P8HaL2Y8QKMNA705tiWc2ehra0rQq07Kf1iv/kgFfj2Vob3NKtN/1ZJARGP0KbC4gt/SMA8X/BNfcdfKgAqIwSDZ3obBuwGAiw03AMguVOaVVM=
