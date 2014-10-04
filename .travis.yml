@@ -1,6 +1,11 @@
 language: ruby
 rvm:
 - 2.1.3
+
+addons:
+  code_climate:
+    repo_token: 1c5d8ac845edfb9818032b4a6af65ca0f6cd04674f0c2527712d140f53426377
+
 deploy:
   provider: heroku
   app: workdat

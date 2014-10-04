@@ -32,6 +32,7 @@ group :test do
   gem 'guard-minitest',     '2.3.1'
   gem 'rubocop'
 end
+gem "codeclimate-test-reporter", group: :test, require: nil
 
 group :production do
   gem 'pg',             '0.17.1'
