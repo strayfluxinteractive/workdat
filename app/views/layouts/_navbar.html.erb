@@ -1,7 +1,11 @@
 <div class="header">
   <ul class="nav nav-pills pull-right">
     <li class="active"><%= link_to "Home", root_path %></li>
-    <li><%= link_to "Sign in",    '#' %></li>
+    <% if current_user %>
+      <li><%= link_to "Sign out", signout_path %></li>
+    <% else %>
+      <li><%= link_to "Sign in", signin_path %></li>
+    <% end %>
   </ul>
   <h3 class="text-muted"><%= full_title(yield(:title)) %></h3>
 </div>
