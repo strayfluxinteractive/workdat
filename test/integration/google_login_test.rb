@@ -14,7 +14,7 @@ class GoogleLoginTest < ActionDispatch::IntegrationTest
   end
 
   test 'google_signin' do
-    get_via_redirect '/auth/google_oauth2', nil, 'omniauth.auth' => OmniAuth.config.mock_auth[:google_oauth2]
+    get_via_redirect signin_path, nil, 'omniauth.auth' => OmniAuth.config.mock_auth[:google_oauth2]
     assert_response :success
     assert_select '#username', @user.name
     assert_equal session[:user_id], @user.id
