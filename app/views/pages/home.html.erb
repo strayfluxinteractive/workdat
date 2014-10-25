@@ -2,7 +2,7 @@
   <h1><%= full_title(yield(:title)) %></h1>
   <p class="lead">A workout tool</p>
   <% if current_user %>
-    <p>Signed in as <strong><%= current_user.name %></strong>!</p>
+    <p>Signed in as <strong id="username"><%= current_user.name %></strong>!</p>
     <%= link_to "Sign out", signout_path, :class => "btn btn-success" %>
   <% else %>
     <p><%= link_to "Sign up", signin_path, :class => "btn btn-success"%></p>
