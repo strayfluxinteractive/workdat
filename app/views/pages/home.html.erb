@@ -1,7 +1,12 @@
 <div class="jumbotron">
   <h1><%= full_title(yield(:title)) %></h1>
   <p class="lead">A workout tool</p>
-  <p><%= link_to "Sign up",  '#' , :class => "btn btn-success"%></p>
+  <% if current_user %>
+    <p>Signed in as <strong><%= current_user.name %></strong>!</p>
+    <%= link_to "Sign out", signout_path, :class => "btn btn-success" %>
+  <% else %>
+    <p><%= link_to "Sign up", signin_path, :class => "btn btn-success"%></p>
+  <% end %>
 </div>
 
 <div class="row marketing">
