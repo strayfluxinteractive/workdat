@@ -6,5 +6,6 @@ class PagesControllerTest < ActionController::TestCase
     get :home
     assert_response :success
     assert_select 'title', 'WorkDat'
+    assert_select '.footer', '© Winky Productions 2014'
   end
 end
