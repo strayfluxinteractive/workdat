@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+@import "bootswatch/yeti/variables";
+
+// Then bootstrap itself
+@import "bootstrap";
+
+// And finally bootswatch style itself
+@import "bootswatch/yeti/bootswatch";

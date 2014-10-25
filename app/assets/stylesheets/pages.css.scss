@@ -1,3 +1,28 @@
 // Place all the styles related to the Pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.tron {
+  padding: 40px 15px;
+  text-align: center;
+}
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  margin-right: 5px;
+}
+
+footer small {
+  float: left;
+}
+
+footer ul {
+  float: right;
+  list-style: none;
+}
+
+footer ul li {
+  float: left;
+  margin-left: 10px;
+}
