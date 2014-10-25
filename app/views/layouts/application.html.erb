@@ -8,13 +8,12 @@
   <%= render 'layouts/shim' %>
 </head>
 <body>
+<div class="container">
+<%= render 'layouts/navbar' %>
 
-  <%= render 'layouts/navbar' %>
+<%= yield %>
 
-
-  <%= yield %>
-
-
-  <%= render 'layouts/footer' %>
+<%= render 'layouts/footer' %>
+</div>
 </body>
 </html>
