@@ -2,6 +2,7 @@ require 'test_helper'
 
 # Test the google login process
 class GoogleLoginTest < ActionDispatch::IntegrationTest
+  # This rigs omniauth to return mock information in test
   def setup
     @user = users(:one)
     OmniAuth.config.test_mode = true
