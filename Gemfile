@@ -9,20 +9,20 @@ gem 'mini_magick',             '3.8.1'
 gem 'fog',                     '1.24.0'
 gem 'will_paginate',           '3.0.7'
 gem 'bootstrap-will_paginate', '0.0.10'
-gem 'bootstrap-sass',          '3.2.0.2'
+gem 'bootstrap-sass',          '3.3.0.1'
 gem 'sass-rails',              '5.0.0.beta1'
 gem 'uglifier',                '2.5.3'
 gem 'coffee-rails',            '4.1.0'
 gem 'jquery-rails',            '3.1.2'
-gem 'turbolinks',              '2.4.0'
+gem 'turbolinks',              '2.5.1'
 gem 'jbuilder',                '2.2.4'
 gem 'rails-html-sanitizer',    '1.0.1'
 gem 'sdoc',                    '0.4.1', group: :doc
-gem 'bootswatch-rails'
-gem 'omniauth-google-oauth2'
+gem 'bootswatch-rails',        '3.2.4'
+gem 'omniauth-google-oauth2',  '0.2.6'
 
 group :development, :test do
-  gem 'sqlite3',     '1.3.9'
+  gem 'sqlite3',     '1.3.10'
   gem 'byebug',      '3.5.1'
   gem 'web-console', '2.0.0.beta4'
   gem 'spring',      '1.1.3'
@@ -32,7 +32,7 @@ group :test do
   gem 'minitest-reporters', '1.0.7'
   gem 'mini_backtrace',     '0.1.3'
   gem 'guard-minitest',     '2.3.2'
-  gem 'rubocop'
+  gem 'rubocop',            '0.27.0'
 end
 gem 'codeclimate-test-reporter', group: :test, require: nil
 
