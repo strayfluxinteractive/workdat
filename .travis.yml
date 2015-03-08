@@ -1,10 +1,16 @@
 language: node_js
 node_js:
-  - "0.10.35"
+- 0.10.35
 before_install:
-  - "curl https://install.meteor.com/ | sh"
-  - npm install jshint -g
+- curl https://install.meteor.com/ | sh
+- npm install jshint -g
 services:
-  - mongodb
+- mongodb
 script:
-  - jshint .
+- jshint .
+deploy:
+  provider: heroku
+  app: workdat
+  api_key:
+    secure: GpvL5A5AHwTVI0R6xGXP3Nl16TEHFFCbZhKnuAT3sRnQXs9+E+i1HjVahxE/Rt6E6pwvmZD4w1KWjoPm7JehTIwCALWCRKUuEzsc6w/vipJh8odTy06mWlFOrA6hs09ycV0aFAd+34W4R0zROcLkIVvG4vMOGI6MJa/k49HYdvI=
+  on: master
