@@ -11,6 +11,7 @@ script:
 deploy:
   provider: heroku
   app: workdat
+  buildpack: https://github.com/jordansissel/heroku-buildpack-meteor.git
   api_key:
     secure: GpvL5A5AHwTVI0R6xGXP3Nl16TEHFFCbZhKnuAT3sRnQXs9+E+i1HjVahxE/Rt6E6pwvmZD4w1KWjoPm7JehTIwCALWCRKUuEzsc6w/vipJh8odTy06mWlFOrA6hs09ycV0aFAd+34W4R0zROcLkIVvG4vMOGI6MJa/k49HYdvI=
   on: master
