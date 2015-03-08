@@ -3,7 +3,7 @@ node_js:
   - "0.10.35"
 before_install:
   - "curl https://install.meteor.com/ | sh"
-  - npm install jshint -g
+  - npm install jslint -g
 services:
   - mongodb
 script:
