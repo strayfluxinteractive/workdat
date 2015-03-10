@@ -11,7 +11,7 @@ var requireLogin = function() {
    //if user is logged in render whatever route was requested
    this.next();
  }
-}
+};
 // Before any routing run the requireLogin function.
 // Except in the case of "landingpage".
 // Note that you can add more pages in the exceptions if you want. (e.g. About, Faq, contact...)
