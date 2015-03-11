@@ -1,16 +1,20 @@
-Router.map(function(){
-  this.route("dashboard");
-  this.route("landing", {path: '/'});
+Router.route('/', function() {
+  this.render('landing');
+});
+
+Router.route('/dashboard', function() {
+  this.render('dashboard');
 });
 
 var requireLogin = function() {
-  if (! Meteor.user()) {
+  if (! Meteor.user() && !Meteor.loggingIn()) {
    // If user is not logged in render landingpage
    this.render('landing');
- } else {
+  }
+  else {
    //if user is logged in render whatever route was requested
    this.next();
- }
+  }
 };
 // Before any routing run the requireLogin function.
 // Except in the case of "landingpage".
