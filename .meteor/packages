@@ -10,3 +10,4 @@ iron:router
 twbs:bootstrap
 ian:accounts-ui-bootstrap-3
 percolate:migrations
+sacha:spin
