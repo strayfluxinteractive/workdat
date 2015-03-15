@@ -1,14 +1,14 @@
 Meteor.publish('exercises', function() {
-  return Exercises.find({ createdBy: Meteor.userId() }); 
+  return Exercises.find({ createdBy: this.userId }); 
 });
 
 Meteor.methods({
-  'insertExercise' : function() {
+  'insertExercise' : function(exerciseName, exerciseType) {
     var currentUserId = Meteor.userId();
     Exercises.insert({
       createdBy : currentUserId,
-      name : "exerciseName",
-      type : "time/set"
+      name : exerciseName,
+      type : exerciseType
     });
   }
 });

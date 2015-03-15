@@ -1,3 +1,62 @@
 <template name="exercises">
+  <div class="table-responsive">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Exercise</th>
+          <th>Type</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each exercise}}
+        <tr>
+          <td>{{name}}</td>
+          <td>{{type}}</td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
 
+  {{>addExercise}}
+</template>
+
+<template name="addExercise">
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addExerciseModal">
+    Create exercise
+  </button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="addExerciseModal" tabindex="-1" role="dialog" aria-labelledby="addExerciseModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="addExerciseModalLabel">Create Exercise</h4>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="exerciseName">Exercise name</label>
+              <input type="text" class="form-control" id="exerciseName" placeholder="Name">
+            </div>
+            <div class="radio">
+              <label>
+              <input type="radio" name="exerciseType" id="exerciseType1" value="time">
+                Time
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+              <input type="radio" name="exerciseType" id="exerciseType2" value="set" checked>
+                Set
+              </label>
+            </div>
+            <button type="submit" class="btn btn-default" id="saveExercise">Save</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
