@@ -1,0 +1,15 @@
+<template name="routines">
+  <div class="row well" id="workoutCreator">
+    <div class="col-md-6 exercises">
+      {{#each exercise}}
+      <div class="panel panel-default draggable">
+        <div class="panel-body exercise">
+          {{name}}
+        </div>
+      </div>
+      {{/each}}
+    </div>
+    <div class="col-md-6 routines dropzone">
+    </div>
+  </div>
+</template>

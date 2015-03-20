@@ -2,6 +2,10 @@ Meteor.publish('exercises', function() {
   return Exercises.find({ createdBy: this.userId }); 
 });
 
+Meteor.publish('routines', function() {
+  return Routines.find({ createdBy: this.userId }); 
+});
+
 Meteor.methods({
   'insertExercise' : function(exerciseName, exerciseType) {
     var currentUserId = Meteor.userId();
