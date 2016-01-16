@@ -1,0 +1,13 @@
+web:
+  image: zephyrz4/workdat
+  ports:
+   - "80:80"
+  links:
+   - mongo
+  environment:
+   - MONGO_URL=mongodb://mongo/workdat
+   - ROOT_URL=http://localhost
+   - MAIL_URL=smtp://localhost:25
+
+mongo:
+  image: mongo:latest
